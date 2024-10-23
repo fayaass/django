@@ -64,6 +64,10 @@ def task5(req,unit):
 
         # Create your views here.
 
+def demo(req):
+    a={'name':'abc','age':22}
+    return render(req,'demo.html',{'data':a})
+
 
 
     
