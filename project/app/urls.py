@@ -10,5 +10,6 @@ urlpatterns=[
     path('task3/<day>',views.task3),
     path('task4/<int:cost>',views.task4),
     path('task5/<int:unit>',views.task5),
-    path('demo',views.demo)
+    path('demo',views.demo),
+    path('user_reg',views.user_reg)
 ]
