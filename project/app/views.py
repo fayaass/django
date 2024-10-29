@@ -1,5 +1,6 @@
 from django.shortcuts import render,redirect
 from django.http import HttpResponse
+from .models import Student
 def fun1(req):
     print("hai")
     a={11,12}
@@ -111,5 +112,13 @@ def delete_user(req,id):
         if i['id']==id:
             users.remove(i)
     return redirect(display)
+
+def index(req):
+    return render(req,'index.html')
+
+def display_std(req):
+
+    data=Student.objects.all()
+    return render(req,'display_std.html',{'std':data})
 
     
